@@ -24,3 +24,6 @@ a:visited { color: gray; }
 .links img:active { top: 1px; left: 1px; box-shadow: none; }
 .links .github img { background: black; }
 .links .csg img { background: rgba(0,0,0,0.01); }
+
+.invader-canon { float: right; margin: -34px 80px 0 0; -webkit-transform: scale(2.5,2.5) rotate(-90deg); cursor: pointer; }
+.invader-laser { position: absolute; float: right; left: -10px; margin: -32px 0 0 0; -webkit-transform: scale(2.5,2.5) rotate(-90deg); }

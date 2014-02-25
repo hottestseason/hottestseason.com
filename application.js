@@ -10,25 +10,30 @@ $(function() {
         newBrand += "<span>" + brandText.charAt(i) + "</span>";
     }
     $brand.html(newBrand);
-    $invaderCanon.click(function() {
-        var $invaderLaser = $(".invader-laser").clone().appendTo($("#navbar"));
-        var left = $invaderCanon.position().left;
-        $invaderLaser.css({ left: left });
-        var timer = setInterval(function() {
-            left -= 6;
+
+    setInterval(function() {
+        $(".invader-laser.launched").each(function() {
+            $laser = $(this);
+            $laser.css({ left: "-=6" });
             var $lastChar = $(".brand > *:visible").last();
-            if ($lastChar.length > 0 && left < $lastChar.position().left + $lastChar.width()) {
-                clearInterval(timer);
-                $invaderLaser.remove();
+            if ($lastChar.length > 0 && $laser.position().left < $lastChar.position().left + $lastChar.width()) {
+                $laser.remove();
                 $lastChar.hide();
                 if ($(".brand > *:visible").length == 0) {
                     $(".brand > *:hidden").show();
                 }
-            } else if (left < 0) {
-                clearInterval(timer);
-            } else {
-                $invaderLaser.css({ left: left });
             }
-        }, 25);
+        });
+    }, 20);
+
+    $invaderCanon.click(function(event) {
+        $(".invader-laser:not(.launched)").clone().addClass("launched").appendTo($("#navbar")).css({ left: $invaderCanon.position().left });
     });
+
+    setInterval(function() {
+        $invaderCanon.click();
+        setTimeout(function() {
+            $(".brand > *:hidden").first().show();
+        }, Math.random() * 7000);
+    }, 3000);
 });

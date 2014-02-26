@@ -5,7 +5,7 @@ body, button, input, select, textarea { font-family: helvetica, arial,"lucida gr
 a { color: #C30C0C; }
 a:visited { color: gray; }
 
-#navbar { height: 60px; width: 100%; background: -webkit-linear-gradient(300deg,rgb(60,60,60) 0%,black 100%); }
+#navbar { height: 60px; width: 100%; background: -webkit-linear-gradient(300deg,rgb(60,60,60) 0%, rgb(20,20,20) 100%); }
 #navbar a { text-decoration: none; }
 #navbar .brand { margin-left: 90px; color: white; font-size: 2.2em; line-height: 60px; font-family: "VT323", cursive; }
 

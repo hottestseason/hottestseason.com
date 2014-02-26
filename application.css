@@ -6,6 +6,7 @@ a { color: #C30C0C; }
 a:visited { color: gray; }
 
 #navbar { height: 60px; width: 100%; background: -webkit-linear-gradient(300deg,rgb(60,60,60) 0%,black 100%); }
+#navbar a { text-decoration: none; }
 #navbar .brand { margin-left: 90px; color: white; font-size: 2.2em; line-height: 60px; font-family: "VT323", cursive; }
 
 .main { margin: 30px 0 0 80px; height: 197px;}
@@ -25,5 +26,5 @@ a:visited { color: gray; }
 .links .github img { background: black; }
 .links .csg img { background: rgba(0,0,0,0.01); }
 
-.invader-canon { float: right; margin: -34px 80px 0 0; -webkit-transform: scale(2.5,2.5) rotate(-90deg); cursor: pointer; }
-.invader-laser { position: absolute; float: right; left: -10px; margin: -32px 0 0 0; -webkit-transform: scale(2.5,2.5) rotate(-90deg); }
+.invader-canon { float: right; margin: 25px 80px 0 0; -webkit-transform: scale(2.5,2.5) rotate(-90deg); cursor: pointer; }
+.invader-laser { position: absolute; float: right; height: 4px; width: 14px; margin-top: -32px; background: white; border-radius: 2px; }

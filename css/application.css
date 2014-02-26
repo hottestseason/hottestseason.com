@@ -28,3 +28,7 @@ a:visited { color: gray; }
 
 .invader-canon { position: absolute; top: 25px; right: 80px; -webkit-transform: scale(2.5,2.5) rotate(-90deg); cursor: pointer; }
 .invader-laser { position: absolute; float: right; height: 4px; width: 14px; margin-top: -32px; background: white; border-radius: 2px; }
+
+footer.content { margin-top: 120px; }
+footer.content hr { border: 0; height: 1px; background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); }
+footer.content .body { text-align: center; font-size: 1em; line-height: 2em; }

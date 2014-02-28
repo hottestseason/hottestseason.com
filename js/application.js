@@ -30,7 +30,7 @@ $(function() {
     });
   }, 5);
 
-  $invaderCanon.click(function(event) { if (laserFireable) { $("<div class='invader-laser'></div>").appendTo($("#navbar")).css({ left: $invaderCanon.position().left }); } });
+  $invaderCanon.click(function(event) { if (laserFireable && $(".invader-laser").length < 10) { $("<div class='invader-laser'></div>").appendTo($("#navbar")).css({ left: $invaderCanon.position().left }); } });
 
   setTimeout(function() {
     (fireLaser = function() { $invaderCanon.click(); setTimeout(fireLaser, Math.random() * 3000); })();

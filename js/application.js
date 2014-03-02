@@ -9,7 +9,7 @@ $(function() {
     $(".tooltip").remove();
   });
 
-  var originalBrand = $(".brand").clone();
+  var originalBrand = $(".brand")[0].outerHTML;
   var laserFireable = true;
 
   $(document).on("start.tlt", ".brand", function() { laserFireable = false; });
@@ -29,15 +29,15 @@ $(function() {
         $lastChar.hide();
         if ($(".brand [class^='char']:visible").length == 0) {
           $(".invader-laser").remove();
-          $(".brand").replaceWith(originalBrand.textillate());
+          $(".brand").replaceWith($(originalBrand).textillate());
         }
-      } else if (lastCharPosition && lastCharPosition.left < 0) {
+      } else if ($laser.position().left < 0) {
         $laser.remove();
       }
     });
   }, 5);
 
-  $invaderCanon.click(function(event) { if (laserFireable && $(".invader-laser").length < 10) { $("<div class='invader-laser'></div>").appendTo($("#navbar")).css({ left: $invaderCanon.position().left }); } });
+  $invaderCanon.click(function(event) { if (laserFireable && $(".invader-laser").length < 15) { $("<div class='invader-laser'></div>").appendTo($("#navbar")).css({ left: $invaderCanon.position().left }); } });
 
   setTimeout(function() {
     (fireLaser = function() { $invaderCanon.click(); setTimeout(fireLaser, Math.random() * 3000); })();

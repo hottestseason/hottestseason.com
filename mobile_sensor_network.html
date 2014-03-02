@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  <script src="js/application.js"></script>
+	  <script src="js/jquery.lettering.js"></script>
+	  <script src="js/jquery.textillate.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="css/animate.css" />
+	  <link rel="stylesheet" href="css/application.css" />
+    <title>hottestseason</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="/" class="brand">HOTTESTSEASON</a>
+      <img class="invader-canon" src="img/invader-canon.png" />
+    </div>
+    <div class="content">
+      <h1>モバイルセンサネットワークにおける仮想ばね力学モデルに基づく自律的ノード展開に関する研究</h1>
+      <h3>Self-Organizing Node Deployment Based on Virtual Spring Mesh for Mobile Wireless Sensor Network</h2>
+    </div>
+    <div class="content">
+      <h2>Abstract</h2>
+      <hr>
+      <p class="body abstract">
+        　近年、ユビキタスネットワークの一要素として、コンテキストアウェアネス（状況認識）の中核機能を提供する無線センサネットワークが注目されている。センサネットワークでは、センサノードを適切に分配配置することで生態の調査や汚染物質調査などの情報収集を行うことが可能であり、アプリケーションに応じたセンサノードの配置方法が重要である。震災などの災害時や毒ガス、放射能等により、人の接近・侵入が困難なエリアの探索等、人が直接センサノードを配置することが難しい環境に対して、エリア内の状況をセンシングするため、移動ロボットにより自律的に無線センサネットワークを構築するための方法が検討されている。その一つに仮想ばね力学を使用したセンサノード展開方法がある。この手法は他の展開手法と比較して、未知のレイアウトの環境に対してもセンサノードを展開することができ、さらに各ノードはセンシング可能な範囲内の情報のみにより自律的に移動することが可能で、かつ、連結性、耐故障性、スケーラビリティを持った展開方法となっている。
+        <br>
+        <br>
+        　本論文では、未知の障害物を含む、定められたエリア内を無線通信機能を有したモバイルセンサによってネットワークを構成し情報収集することを想定する。対象エリアに対して一定の容量のバッテリーを持つモバイルセンサノードをシンクノード周辺から展開させていくことで、無線センサネットワークを構築することを想定する。この想定環境の元、既存のばね力学による展開方法に対して、センシングエリアからより多くの情報がシンクノードに集積できるように改良を行った。既存のばね力学による展開法では、未知の障害物がある環境では、適切なノード数を設定することが難しいという課題がある。そこで、本研究では検知可能な壁（エリアの境界線やそれぞれのノードのセンシング可能領域内の障害物）からの引力をエッジノード（ネットワークの端に存在するノード）に付加し、それを利用することでセンサネットワークが適切なノード数を随時展開していく方法を提案した。また、センサノードのバッテリーが切れてしまうとその周囲のセンシングができなくなるだけでなく、ネットワーク全体の連結性にも影響が出る。これらを避けるため、ノードの残余電力に応じてばねの自然長を短くする手法を提案した。これら２つの改良を行うことで、単純なばねモデルによる展開と比べて、シンクノードまで転送されたセンシングデータの量が増加したことをシミュレーションにより示した。
+      </p>
+    </div>
+    <div class="content">
+      <h2>Movies</h2>
+      <hr>
+      <div class="body">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/N1fSxU4PnRA" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Links</h2>
+      <hr>
+      <div class="body">
+        <a href="./materials/mobile_sensor_network.pdf">Slide</a><br>
+        <a href="https://github.com/hottestseason/MobileSensorNetworkSimulator">Source Code - Github</a><br>
+        <a href="http://wcnc2014.ieee-wcnc.org/program/technical-sessions/wednesday">http://wcnc2014.ieee-wcnc.org/program/technical-sessions/wednesday</a>
+      </div>
+    </div>
+    <footer class="content">
+      <hr>
+      <div class="body">© 2014 Sumihiko Natsu</div>
+    </footer>
+  </body>
+</html>

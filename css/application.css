@@ -3,7 +3,7 @@ body, p { margin: 0; }
 body, button, input, select, textarea { font-family: helvetica, arial,"lucida grande", verdana, "メイリオ", "ＭＳ Ｐゴシック", sans-serif; color: #484848; }
 
 a { color: #C30C0C; }
-a:visited { color: gray; }
+a:visited { color: #780707; }
 
 #navbar { height: 60px; width: 100%; background: -webkit-linear-gradient(300deg,rgb(60,60,60) 0%, rgb(20,20,20) 100%); }
 #navbar a { text-decoration: none; }
@@ -16,7 +16,10 @@ a:visited { color: gray; }
 .main .description { float: left; font-size: 1em; line-height: 1.2em; }
 
 .content { margin: 45px 0 0 105px; width: 780px; clear: both; }
-.content h2 { margin: 0; width: 100%; font-size: 2.8em; line-height: 1.2em; font-weight: normal; color: black; border-bottom: groove 2px #DDD; }
+.content h1 { margin: 0; width: 100%; font-size: 2.2em; line-height: 1.4em; font-weight: normal; color: black; }
+.content h2 { margin: 0; width: 100%; font-size: 2em; line-height: 1.2em; font-weight: normal; color: black; }
+.content h3 { margin: 0; width: 100%; font-size: 1.4em; line-height: 1.2em; font-weight: normal; color: black; }
+.content hr { border: 0; height: 0; border-bottom: groove 2px #DDD; }
 .content .body { margin-top: 10px; font-size: 1.2em; line-height: 1.3em; }
 
 .links { margin-top: 16px; height: 60px; }

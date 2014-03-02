@@ -2,6 +2,13 @@ $(function() {
   var gmail = ['hottestseason', '@', 'gmail.com'].join('');
   $("#gmail").html('<a href="mailto:' + gmail + '">' + gmail + '</a>');
 
+  $(".links img").hover(function() {
+    position = $(this).position();
+    $("<div class='tooltip'>" + $(this).parent().data("tooltip") + "</div>").appendTo($("body")).css({ top: position.top + $(this).height(), left: position.left + $(this).width() / 2 });
+  }, function() {
+    $(".tooltip").remove();
+  });
+
   var originalBrand = $(".brand").clone();
   var laserFireable = true;
 

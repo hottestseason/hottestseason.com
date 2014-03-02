@@ -9,6 +9,21 @@ $(function() {
     $(".tooltip").remove();
   });
 
+  $("iframe[data-lazy]").each(function() {
+    $iframe = $(this);
+    $placeholder = $("<div>Loading...</div>").width($iframe.width()).height($iframe.height());
+    $iframe.replaceWith($placeholder);
+    var count = 0;
+    (countup = function() {
+      if (count++ > 5) {
+        $placeholder.replaceWith($iframe);
+      } else {
+        $placeholder.text($placeholder.text() + ".");
+        setTimeout(countup, 400);
+      }
+    })();
+  });
+
   var originalBrand = $(".brand")[0].outerHTML;
   var laserFireable = true;
 

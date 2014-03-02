@@ -1,5 +1,5 @@
 $(function() {
-  var gmail = ['hottestseason', '@', 'gmail.com'].join('');
+  var gmail = eval($("#gmail").html());
   $("#gmail").html('<a href="mailto:' + gmail + '">' + gmail + '</a>');
 
   $(".links img").hover(function() {

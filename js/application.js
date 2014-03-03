@@ -10,18 +10,19 @@ $(function() {
   });
 
   $("iframe[data-lazy]").each(function() {
-    $iframe = $(this);
-    $placeholder = $("<div>Loading...</div>").width($iframe.width()).height($iframe.height());
+    var $iframe = $(this);
+    var $placeholder = $("<div>Loading...</div>").width($iframe.width()).height($iframe.height());
     $iframe.replaceWith($placeholder);
     var count = 0;
-    (countup = function() {
+    var countup = function() {
       if (count++ > 5) {
         $placeholder.replaceWith($iframe);
       } else {
         $placeholder.text($placeholder.text() + ".");
         setTimeout(countup, 400);
       }
-    })();
+    };
+    countup();
   });
 
   var originalBrand = $(".brand")[0].outerHTML;

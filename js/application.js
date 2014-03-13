@@ -26,10 +26,12 @@ $(function() {
   });
 
   var originalBrand = $(".brand")[0].outerHTML;
-  var laserFireable = true;
 
+  var laserFireable = true;
   $(document).on("start.tlt", ".brand", function() { laserFireable = false; });
   $(document).on("end.tlt", ".brand", function() { laserFireable = true; });
+  $(window).blur(function() { laserFireable = false; });
+  $(window).focus(function() { laserFireable = true; });
 
   $(".brand").textillate();
 
